@@ -1,0 +1,1667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navbar</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Livvic:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="" crossorigin="anonymous" />
+<style>
+    /* HERO SECTION */
+.hero {
+    width: 100%;
+    background: #dd8d38;
+    padding: 60px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.hero-content {
+    max-width: 550px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.hero-content p {
+    font-size: 18px;
+    color: #222;
+    margin: 12px 0;
+}
+
+.points {
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.extra-line {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.row-btn {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.hero-btn {
+    background: #ff299e;
+    padding: 14px 28px;
+    color: white;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.hero-btn:hover {
+    background: #e6007e;
+}
+
+.play-btn {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 16px;
+    cursor: pointer;
+    font-size: 22px;
+}
+
+/* right image area */
+    .hero-right{
+      flex:0 0 420px;
+      display:flex;
+      justify-content:center;
+      align-items:flex-end;
+      min-width:260px;
+      position:relative;
+      padding-bottom:12px;
+    }
+
+    .hero-right img{
+      max-width:100%;
+      height:auto;
+      display:block;
+      transform: translateY(6px);
+    }
+
+@media (max-width: 900px) {
+    .hero {
+        text-align: center;
+        flex-direction: column;
+    }
+    .row-btn {
+        justify-content: center;
+    }
+}
+/* HERO SECTION */
+/* HERO SECTION */
+.hero {
+    width: 100vw;
+    max-width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 60px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #dd8d38;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+.hero-content {
+    max-width: 550px;
+}
+#text-rotate {
+    transition: color 0.4s ease, opacity 0.4s ease;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.hero-content p {
+    font-size: 18px;
+    color: #222;
+    margin: 12px 0;
+}
+
+.row-btn {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.hero-btn {
+    background: #ff299e;
+    padding: 14px 28px;
+    color: white;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.hero-btn:hover {
+    background: #e6007e;
+}
+
+video-play-btn {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: rgb(7, 111, 196);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 16px;
+    cursor: pointer;
+    font-size: 22px;
+}
+#text-rotate {
+    transition: opacity 0.4s linear;
+}
+
+/* 🔥 FIXED RIGHT SIDE IMAGE */
+.hero-right {
+    flex: 0 0 auto;
+}
+
+.hero-right img {
+    max-width: 420px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* RESPONSIVE FIX */
+@media (max-width: 900px) {
+    .hero {
+        text-align: center;
+        flex-direction: column;
+    }
+    .hero-right {
+        margin-top: 30px;
+        flex: 0 0 100%;
+    }
+}
+.features-section {
+    padding: 60px 5%;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 40px;
+    color: #2C2C2C;
+}
+
+.features-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 per row */
+    gap: 10px !important;
+    justify-items: center;
+}
+
+.feature-card {
+    width: 260px;
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+/* Hover effect */
+.feature-card:hover {
+    transform: translateY(-8px);
+}
+
+.feature-card img {
+    width: 60px;
+    height: 60px;
+   margin-bottom: 5px; /* SPACE OCHU */
+}
+
+.feature-card h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.feature-card p {
+    font-size: 15px;
+    color: #444;
+    line-height: 1.5;
+    padding: 15px !important;
+}
+.feature-card {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.feature-card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.info-section {
+    position: relative;
+    padding: 80px 0;
+    background: #25273D;
+    text-align: center;
+    color: white;
+    overflow: hidden; /* MOST IMPORTANT - image bahar nathi nikle */
+}
+
+.info-section img {
+    width: 250px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.9;
+}
+
+.info-left {
+    left: 0;
+}
+
+.info-right {
+    right: 0;
+}
+
+.info-content {
+    max-width: 700px;
+    margin: auto;
+    z-index: 10;
+    position: relative;
+}
+
+.info-btn {
+    margin-top: 20px;
+    background: #2F80ED;
+    padding: 12px 25px;
+    color: white;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+.highlight-box {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1s ease;
+}
+
+.highlight-box.show-highlight {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* SECTION MAIN */
+.four-p-section {
+    text-align: center;
+    padding: 60px 40px;
+    background: #f5f5f5;
+    position: relative;
+}
+
+/* TITLE */
+.four-p-section .title {
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 60px;
+    color: #333;
+}
+
+/* P BOX WRAPPER */
+.p-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    flex-wrap: wrap;
+}
+
+/* EACH BOX */
+.p-box {
+    width: 230px;
+    text-align: center;
+}
+
+.p-box .p-icon {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 15px;
+    border-radius: 50%;
+    background: #f1f1f1;
+    overflow: hidden;
+
+    position: relative; /* IMPORTANT */
+}
+
+.p-box .p-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    position: absolute; /* force center */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* PERFECT CENTER */
+}
+
+.p-box h3 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.p-box p {
+    font-size: 14px;
+    color: #555;
+    margin: 12px 0 20px;
+}
+
+.learn-btn {
+    padding: 7px 15px;
+    border-radius: 6px;
+    border: none;
+    background: #2f80ed;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.learn-btn:hover {
+    background: #1360cf;
+}
+
+/* BLUE CURVED BOX */
+.blue-box {
+    width: 100%;
+    background: #2f2885;
+    margin-top: 70px;
+    padding: 40px 20px;
+    border-radius: 40px 40px 0 0;
+    color: #fff;
+    position: relative;
+}
+
+.blue-inner {
+    max-width: 850px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.blue-inner .icon {
+    font-size: 45px;
+}
+
+.blue-inner p {
+    font-size: 18px;
+    font-weight: 500;
+}
+.p-box {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+    padding: 20px;
+    border-radius: 18px;
+    background: #ffffff;
+    box-shadow: 0 0 0 rgba(0,0,0,0.1);
+}
+
+.p-box:hover {
+    transform: translateY(-20px) scale(1.05);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    border: 2px solid #2f80ed;
+}
+.learning-section {
+    text-align: center;
+    padding: 30px 0;
+     padding-bottom: 70px; /* NEW extra space */
+}
+
+.learning-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 900px;
+    margin: auto;
+    align-items: start;   /* ADD THIS */
+
+}
+
+.learn-card {
+    width: 250px;
+    height: 280px;
+    perspective: 900px;
+    margin: auto;
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.7s;
+    transform-style: preserve-3d;
+}
+
+.learn-card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 15px;
+    color: white;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.card-front::after {
+    content:"";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.7));
+    border-radius: 15px;
+}
+
+.card-front h3 {
+    position: relative;
+    font-size: 18px;
+    z-index: 2;
+    margin-top: auto; 
+}
+
+.card-back {
+    background: #1a1b2f;
+    transform: rotateY(180deg);
+}
+.yellow-banner {
+    width: 100%;
+    background: linear-gradient(90deg, #dd8d38, #dd8d38, #dd8d38);
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.banner-content {
+    width: 85%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center; /* justify-content: space-between;  REMOVE THIS */
+    padding-left: 370px;   /* text thodu right taraf sharu thase */
+    gap: 15px; 
+}
+
+.banner-btn {
+    background: #ffb800;
+    color: #ffffff;
+    padding: 12px 28px;
+    border-radius: 10px;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 16px;
+    display: inline-block;
+    border: none;
+    transition: 0.3s ease;
+    white-space: nowrap;
+    margin-left: auto;   /* <<< MAGIC LINE FOR RIGHT SIDE */
+}
+
+.banner-btn:hover {
+    background: #e0a300;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.faq-section {
+    width: 70%;
+    margin: 50px auto;
+    padding: 20px 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.faq-title {
+    text-align: center;
+    color: #ffb800; /* hospital blue */
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 35px;
+}
+
+.faq-item {
+    background: #f4f9ff;
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin-bottom: 18px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+    transition: 0.3s ease;
+}
+
+.faq-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.09);
+}
+
+.faq-question {
+    font-size: 17px;
+    color: #2a2a2a;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-icon {
+    font-size: 22px;
+    color: #ffb800;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    padding-left: 5px;
+    transition: max-height 0.4s ease, opacity 0.3s ease;
+    color: #444;
+    margin-top: 10px;
+}
+.faq-answer.open {
+    max-height: 200px;
+    opacity: 1;
+}
+.video-slider {
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.video-container {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.4s ease;
+}
+
+.video-card {
+    width: 280px;
+    height: 170px;
+    position: relative;
+    cursor: pointer;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #eee;
+}
+
+.video-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255,255,255,0.9);
+    padding: 12px 16px;
+    border-radius: 50%;
+    font-size: 22px;
+}
+
+.nav-btn {
+    background: #3498db;
+    border: none;
+    font-size: 32px;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.nav-btn:hover {
+    background: #1f7abb;
+}
+
+/*** POPUP ***/
+.video-popup {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.55);
+    justify-content: center;
+    align-items: center;
+}
+
+.video-popup-content {
+    width: 90%;
+    max-width: 700px;
+    background: #fff;
+    padding: 15px;
+    border-radius: 12px;
+    position: relative;
+}
+
+.close-popup {
+    position: absolute;
+    top: 10px;
+    right: 18px;
+    font-size: 34px;
+    cursor: pointer;
+    color: #000;
+}
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 400px;        /* background thodu aachu */
+    overflow: hidden;
+}
+
+/* Background Video */
+.bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+/* Darker overlay for clear text */
+.video-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.55); /* Dark + clean look */
+    z-index: 2;
+}
+
+/* Content Center */
+/* NEW HERO CONTENT */
+.hero-box-content {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 25px;
+    color: #fff;
+}
+
+/* NEW HERO HEADING */
+.hero-box-title {
+    font-size: 48px;
+    font-weight: 900;
+    color: #ffffff !important;
+    line-height: 1.3;
+    max-width: 880px;
+    margin: auto;
+    text-shadow: 0px 4px 12px rgba(0,0,0,0.6);
+}
+
+/* NEW BUTTON */
+.hero-box-btn {
+    margin-top: 25px;
+    padding: 14px 32px;
+    background: #2F80ED;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    display: inline-flex;
+    gap: 10px;
+    align-items: center;
+    transition: 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.hero-box-btn:hover {
+    background: #1566c9;
+    transform: translateY(-3px);
+}
+
+.hero-box-btn .arrow {
+    transition: 0.3s;
+}
+
+.hero-box-btn:hover .arrow {
+    transform: translateX(5px);
+}
+</style>
+
+
+</head>
+<body>
+
+<section>
+    <div class="top-bar">
+        Call us @ +91 1800 4120 1580
+    </div>
+</section>
+<!-- ============================ navbar =============================== -->
+<section>
+  <div class="container">
+    <nav class="navbar">
+        <div class="logo">
+            <img src="../assets/logo.png" alt="Spacece Logo">
+        </div>
+
+        <ul class="nav-links">
+
+            <li><a href="index.html">Home</a></li>
+
+            <!-- Programs -->
+            <li class="dropdown">
+                <a href="#">Programs <i class="fa-solid fa-angle-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="./Programs/start_your_school.html">Start Your School</a></li>
+                    <li><a href="./Programs/upgrade_your_school.html">Upgrade Your School</a></li>
+                    <li><a href="./Programs/parents_toddler_program.html">Parents & Toddler Program</a></li>
+                </ul>
+            </li>
+
+            <!-- PTTC -->
+            <li><a href="PTTC.html">PTTC</a></li>
+
+            <!-- Admissions -->
+            <li class="dropdown">
+                <a href="Admission.html">Admissions</a>
+            </li>
+
+            <!-- About Us -->
+            <li class="dropdown">
+                <a href="Aboutus.html">About Us <i class="fa-solid fa-angle-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="./Aboutus/Contactus.html">Contact Us</a></li>
+                    <li><a href="./Aboutus/Our_vision.html">Our Vision & Mission</a></li>
+                    <li><a href="./Aboutus/Our_Team.html">Our Team</a></li>
+                </ul>
+            </li>
+
+            <!-- Resources -->
+            <li class="dropdown">
+                <a href="Resources.html">Resources <i class="fa-solid fa-angle-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="./Resources/Blogs.html">Blogs</a></li>
+                    <li><a href="./Resources/Parent_guides.html">Parent Guides</a></li>
+                </ul>
+            </li>
+
+
+        </ul>
+
+        <!-- Enquire Button -->
+        <a class="enquire-btn" href="javascript:void(0)" onclick="openPopup()">Enquire Now</a>
+
+        <!-- POPUP OVERLAY -->
+        <div class="popup-overlay" id="popup">
+            <div class="popup-box">
+
+                <!-- Close Button -->
+                <button class="close-popup" onclick="closePopup()">×</button>
+
+                <!-- ZOHO FORM STARTS HERE -->
+                <form action="https://forms.zohopublic.com/kidoenterprises/form/KreedoWebsiteContactUsForm/formperma/UxHWZ_P2f6BEfg5Q5jJFP8txtfC_XkHyoDowK3rbSIA/htmlRecords/submit"
+                    name="form" method="POST" id="form" accept-charset="UTF-8" class="enquire_form">
+
+
+                    <h2>Please fill out the form below and we will respond within 24hrs</h2>
+
+                    <!-- Hidden UTM Fields -->
+                    <input type="hidden" name="zf_referrer_name">
+                    <input type="hidden" name="zf_redirect_url">
+                    <input type="hidden" name="zc_gad">
+                    <input type="hidden" name="utm_source" id="utm_source">
+                    <input type="hidden" name="utm_medium" id="utm_medium">
+                    <input type="hidden" name="utm_campaign" id="utm_campaign">
+                    <input type="hidden" name="utm_device" id="utm_device">
+                    <input type="hidden" name="utm_Adgroup" id="utm_Adgroup">
+                    <input type="hidden" name="gclid" id="gclid">
+                    <input type="hidden" name="referrername" id="referrername">
+
+                    <!-- Inputs -->
+                    <input type="text" name="SingleLine" placeholder="Enter your name" required>
+                    <input type="email" name="Email" placeholder="Enter Your Email" required>
+                    <input type="text" name="PhoneNumber_countrycode" pattern="[0-9]{10}" placeholder="Number" required>
+
+                    <select name="Dropdown" required>
+                        <option value="">Select State</option>
+                        <option>Maharashtra</option>
+                        <option>Gujarat</option>
+                    </select>
+
+                    <select name="Dropdown1" required>
+                        <option value="">Category</option>
+                        <option value="Individual">Starting a new school</option>
+                        <option value="K-12 School">Upgrading my school</option>
+                        <option value="Teacher">Interested in Teacher Training Course</option>
+                    </select>
+
+                    <textarea name="MultiLine" placeholder="Message"></textarea>
+
+                    <!-- Captcha -->
+                    <span id="captchaText">IqOmSl</span>
+                    <input type="text" placeholder="Enter the above text" required>
+
+                    <!-- Checkbox -->
+                    <label class="check-label">
+                        <input type="checkbox" checked>
+                        Please contact me via WhatsApp, SMS, Phone, and Email
+                    </label>
+
+                    <!-- Submit -->
+                    <button class="zf-submitColor">Submit</button>
+                </form>
+                <!-- 🔥 ZOHO FORM ENDS HERE -->
+            </div>
+        </div>
+
+
+        <!-- Mobile Menu Icon -->
+        <!-- <button class="menu-btn" onclick="openMenu()">☰</button> -->
+        <button class="menu-btn">☰</button>
+    </nav>
+
+    <!-- BLACK OVERLAY -->
+    <!-- <div class="overlay" onclick="closeMenu()"></div> -->
+     <div class="overlay"></div>
+
+    <!-- SIDEBAR -->
+    <nav class="menu_btn_info">
+        <button class="close-btn">×</button>
+
+        <div class="slider_logo">
+            <img src="../assets/logo.png" alt="Spacece Logo">
+        </div>
+        <ul class="slider_menu nav-links">
+
+            <li><a href="index.html">Home</a></li>
+
+            <!-- Programs -->
+            <li class="slider_menu dropdown">
+                <a href="#">Programs <i class="fa-solid fa-angle-right"></i></a>
+                <ul class="slider_menu dropdown-menu">
+                    <li><a href="./Programs/start_your_school.html">Start Your School</a></li>
+                    <li><a href="./Programs/upgrade_your_school.html">Upgrade Your School</a></li>
+                    <li><a href="./Programs/parents_toddler_program.html">Parents & Toddler Program</a></li>
+                </ul>
+            </li>
+
+            <!-- PTTC -->
+            <li><a href="PTTC.html">PTTC</a></li>
+
+            <!-- Admissions -->
+            <li class="sliderbar_menu dropdown">
+                <a href="Admission.html">Admissions</a>
+            </li>
+
+            <!-- About Us -->
+            <li class="sliderbar_menu dropdown">
+                <a href="./Aboutus/Aboutus.html">About Us <i class="fa-solid fa-angle-right"></i></a>
+                <ul class="sliderbar_menu dropdown-menu">
+                    <li><a href="./Aboutus/Contactus.html">Contact Us</a></li>
+                    <li><a href="./Aboutus/Our_vision.html">Our Vision & Mission</a></li>
+                    <li><a href="./Aboutus/Our_Team.html">Our Team</a></li>
+                </ul>
+            </li>
+
+            <!-- Resources -->
+            <li class="sliderbar_menu dropdown">
+                <a href="#">Resources <i class="fa-solid fa-angle-right"></i></a>
+                <ul class="sliderbar_menu dropdown-menu">
+                    <li><a href="./Resources/Blogs.html">Blogs</a></li>
+                    <li><a href="./Resources/Parent_guides.html">Parent Guides</a></li>
+                </ul>
+            </li>
+
+
+        </ul>
+    </nav>
+  </div>
+</section>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>
+            Start your own brand of<br>
+            <span id="text-rotate" style="color:#2F7666;">Preschool</span> Non Franchise,<br>
+            No Royalties
+        </h1>
+
+        <p>
+            Dreaming of being an education change maker? Partner with us to make
+            your dream of becoming a successful entrepreneur a reality.
+        </p>
+
+        <p class="points">
+            3500+ Schools | 700,000+ Children | 50% Better Outcomes
+        </p>
+
+        <p class="extra-line">
+            ⭐ 2000+ Preschools | India’s Fastest Growing Learning Network
+        </p>
+
+        <div class="row-btn">
+    
+<a class="hero-btn" onclick="openPopup()">Enquire Now <span>→</span></a>
+
+    <a href="https://www.youtube.com/watch?v=IZxkuVx7AGg" target="_blank"class="video-play-btn">  
+    </a>
+</div>
+
+
+    </div>
+
+    <div class="hero-right" aria-hidden="false">
+   <img decoding="async" width="698" height="559" src="../ss/newSchoolHeroImgg.png" class="attachment-full size-full wp-image-540 entered lazyloaded" alt="" data-lazy-srcset="https://kreedology.com/wp-content/uploads/2023/03/newSchoolHeroImgg.png 698w, https://kreedology.com/wp-content/uploads/2023/03/newSchoolHeroImgg-300x240.png 300w" data-lazy-sizes="(max-width: 698px) 100vw, 698px" data-lazy-src="https://kreedology.com/wp-content/uploads/2023/03/newSchoolHeroImgg.png" data-ll-status="loaded" sizes="(max-width: 698px) 100vw, 698px" srcset="https://kreedology.com/wp-content/uploads/2023/03/newSchoolHeroImgg.png 698w, https://kreedology.com/wp-content/uploads/2023/03/newSchoolHeroImgg-300x240.png 300w">
+</div>
+</section>
+
+<!-- ================= END HERO SECTION ================= -->
+<section class="features-section">
+    <h2 class="section-title">
+        Partner with Us for Complete Support in Running Your Preschool / School
+    </h2>
+
+    <div class="features-container">
+
+        <!-- Row 1 – 3 Cards -->
+        <div class="feature-card">
+            <img src="../ss/2583342.png" alt="icon">
+            <h3>Build Your Own Brand</h3>
+            <p>Start your own preschool/school brand with full support.</p>
+        </div>
+
+        <div class="feature-card">
+            <img src="../ss/3063822.png" alt="icon">
+            <h3>No Franchise Fees</h3>
+            <p>Earn more profit because we charge no franchise fees.</p>
+        </div>
+
+        <div class="feature-card">
+            <img src="../ss/992700.png" alt="icon">
+            <h3>Phenomenal Outcomes</h3>
+            <p>Our learning system delivers outstanding results.</p>
+        </div>
+
+        <!-- Row 2 – 3 Cards -->
+        <div class="feature-card">
+            <img src="../ss/1827365.png" alt="icon">
+            <h3>Teacher Training</h3>
+            <p>We provide high-quality teacher training programs.</p>
+        </div>
+
+        <div class="feature-card">
+            <img src="../ss/3135715.png" alt="icon">
+            <h3>Marketing Support</h3>
+            <p>Branding, marketing, and parent engagement support.</p>
+        </div>
+
+        <div class="feature-card">
+            <img src="../ss/906334.png" alt="icon">
+            <h3>Technology Support</h3>
+            <p>Learning apps, dashboards, and digital tools included.</p>
+        </div>
+
+    </div>
+</section>
+<section class="info-section highlight-box">
+    <img class="info-left" src="../ss/img 3.png" alt="">
+    
+    <div class="info-content">
+        <h2>
+            Did you know that Kreedo is the largest non-franchise preschool solution provider in India with 
+            3500+ partners in more than 350+ towns and cities?
+        </h2>
+        <button class="info-btn">Enquire Now </button>
+    </div>
+
+    <img class="info-right" src="../ss/img 3.png" alt="">
+</section>
+
+<section class="four-p-section">
+
+    <h2 class="title">
+        While starting a Child Hospital , SpaceCE helps you finalize the 4 main factors that are critical to start
+    </h2>
+
+    <div class="p-wrapper">
+
+        <!-- PLACE -->
+        <div class="p-box">
+            <img src="../ss/s1.jpeg" class="p-icon" alt="">
+            <h3>Child Care Services</h3>
+            <p>SpaceCE helps you plan important child care services like routine checkups, vaccination, growth assessment and wellness programs.
+            </p>
+            <button class="learn-btn">Learn more</button>
+        </div>
+
+        <!-- PRODUCT -->
+        <div class="p-box">
+            <img src="../ss/s2.jpeg" class="p-icon" alt="">
+            <h3>Child Medical Support</h3>
+            <p>SpaceCE guides you in setting up child-focused medical support such as treatment assistance, infection care, emergency help and pediatric consultation.
+            </p>
+            <button class="learn-btn">Learn more</button>
+        </div>
+
+        <!-- PRICE -->
+        <div class="p-box">
+            <img src="../ss/s3.jpeg" class="p-icon" alt="">
+            <h3>Child Health & Development</h3>
+            <p>SpaceCE supports you in managing overall child health, including growth tracking, nutrition guidance, behavioral care and developmental monitoring.
+
+            </p>
+            <button class="learn-btn">Learn more</button>
+        </div>
+
+        <!-- PROMOTION -->
+        <div class="p-box">
+            <img src="../ss/p1 (4).jpeg" class="p-icon" alt="">
+            <h3>Parent Guidance & Support</h3>
+            <p>SpaceCE provides complete support to parents through counseling, follow-up guidance, health updates and child care assistance whenever needed.
+
+            </p>
+            <button class="learn-btn">Learn more</button>
+        </div>
+    </div>
+
+    <!-- BLUE CURVED BOTTOM BOX -->
+    <div class="blue-box">
+        <div class="blue-inner">
+            <span class="icon">🚀</span>
+            <p>Did you know that Kreedo’s learning outcomes have been benchmarked to be 50% better than market?</p>
+        </div>
+    </div>
+
+</section>
+<section class="learning-section">
+
+    <h2 class="section-title">spacece 6T Learning Framework</h2>
+
+    <div class="learning-container">
+
+        <div class="learn-card">
+            <div class="card-inner">
+                <div class="card-front" style="background-image:url('../ss/p1 (1).jpeg')">
+                    <h3>Toys</h3>
+                </div>
+                <div class="card-back">
+                    <h3>Toys</h3>
+                    <p>Lorem ipsum dolor.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="learn-card">
+            <div class="card-inner">
+                <div class="card-front" style="background-image:url('../ss/p1 (6).jpeg')">
+                    <h3>Theory</h3>
+                </div>
+                <div class="card-back">
+                    <h3>Theory</h3>
+                    <p>Lorem ipsum dolor.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="learn-card">
+            <div class="card-inner">
+                <div class="card-front" style="background-image:url('../ss/p1 (5).jpeg')">
+                    <h3>Timetable</h3>
+                </div>
+                <div class="card-back">
+                    <h3>Timetable</h3>
+                    <p>Lorem ipsum dolor.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="learn-card">
+            <div class="card-inner">
+                <div class="card-front" style="background-image:url('../ss/p1 (2).jpeg')">
+                    <h3>Tracking</h3>
+                </div>
+                <div class="card-back">
+                    <h3>Tracking</h3>
+                    <p>Lorem ipsum dolor.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="learn-card">
+            <div class="card-inner">
+                <div class="card-front" style="background-image:url('../ss/p1 (4).jpeg')">
+                    <h3>Training</h3>
+                </div>
+                <div class="card-back">
+                    <h3>Training</h3>
+                    <p>Lorem ipsum dolor.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="learn-card">
+            <div class="card-inner">
+                <div class="card-front" style="background-image:url('../ss/p1 (3).jpeg')">
+                    <h3>Techniques</h3>
+                </div>
+                <div class="card-back">
+                    <h3>Techniques</h3>
+                    <p>Lorem ipsum dolor.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+<section class="yellow-banner">
+    <div class="banner-content">
+        <p>
+            Did you know that the Kreedo curriculum is completely aligned with the
+            New Education Policy (NEP) and <br>the National Curriculum Framework (NCF)
+            announced by Government of India?
+        </p>
+
+       <a href="#" class="banner-btn">Enquire Now</a>
+
+    </div>
+</section>
+<section>
+    <h2 class="faq-title">Don't take our work for it</h2><br>
+    <div class="video-slider">
+        
+    <button class="nav-btn left-btn">&#10094;</button>
+
+    <div class="video-container">
+
+        <div class="video-card" data-video="IZxkuVx7AGg">
+            <img class="thumb" data-id="IZxkuVx7AGg">
+            <div class="play-btn">▶</div>
+        </div>
+
+        <div class="video-card" data-video="7ts2h3KdWLM">
+            <img class="thumb" data-id="7ts2h3KdWLM">
+            <div class="play-btn">▶</div>
+        </div>
+
+        <div class="video-card" data-video="_Rm619vwwpo">
+            <img class="thumb" data-id="_Rm619vwwpo">
+            <div class="play-btn">▶</div>
+        </div>
+
+        <!-- 4th video — send me correct ID -->
+        <div class="video-card" data-video="YOUR_4TH_ID">
+            <img class="thumb" data-id="YOUR_4TH_ID">
+            <div class="play-btn">▶</div>
+        </div>
+
+    </div>
+
+    <button class="nav-btn right-btn">&#10095;</button>
+</div>
+
+
+<!-- POPUP -->
+<div class="video-popup" id="videoPopup">
+    <div class="video-popup-content">
+        <span class="close-popup" id="closePopupBtn">×</span>
+        <iframe id="popupPlayer" width="100%" height="400" frameborder="0" allowfullscreen></iframe>
+    </div>
+</div>
+
+</section>
+<section class="faq-section">
+    <h2 class="faq-title">Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            How can I book an appointment for my child?
+            <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+            <p>You can book an appointment online or call our hospital reception anytime.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            What facilities are available in the Child Care Unit?
+            <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+            <p>We provide NICU, PICU, vaccination, emergency care, and specialist pediatric doctors.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            Are emergency services available 24x7?
+            <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+            <p>Yes, our hospital is open 24x7 for all emergency pediatric cases.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            Do you offer vaccinations for children?
+            <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+            <p>Yes, we offer complete vaccinations for newborns to teenagers.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            Can parents stay with their child during admission?
+            <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+            <p>Yes, one parent is allowed to stay with the child throughout the treatment.</p>
+        </div>
+    </div>
+
+</section>
+<section class="hero-section">
+    <video class="bg-video" autoplay muted loop playsinline>
+        <source src="../video/baner.mp4" type="video/mp4">
+    </video>
+
+    <div class="video-overlay"></div>
+
+    <div class="hero-box-content">
+        <h1 class="hero-box-title">
+            Blend Purpose with Play – Unlock the Power of Activity-Based Learning
+        </h1>
+
+        <button class="hero-box-btn">
+            Enquire Now
+            <span class="arrow">➜</span>
+        </button>
+    </div>
+</section>
+
+<!-- ============================  Dropdown button  =============================== -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const dropdown = document.querySelector(".dropdown > a");
+    const dropdownMenu = document.querySelector(".dropdown-menu");
+
+    dropdown.addEventListener("click", function (e) {
+        e.preventDefault(); 
+        dropdownMenu.style.display =
+            dropdownMenu.style.display === "block" ? "none" : "block";
+    });
+
+    document.addEventListener("click", function (e) {
+        if (!dropdown.contains(e.target) && !dropdownMenu.contains(e.target)) {
+            dropdownMenu.style.display = "none";
+        }
+    });
+});
+</script>
+
+<!-- ============================ Slider Menu Button =============================== -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const menu = document.querySelector(".menu_btn_info");  // RIGHT SIDEBAR
+    const overlay = document.querySelector(".overlay");     // DARK BACKGROUND
+    const menuBtn = document.querySelector(".menu-btn");    // ☰ BUTTON
+    const closeBtn = document.querySelector(".close-btn");  // CROSS BUTTON
+
+    // OPEN MENU
+    menuBtn.addEventListener("click", () => {
+        menu.classList.add("active");
+        overlay.classList.add("show");
+    });
+
+    // CLOSE MENU (X button)
+    closeBtn.addEventListener("click", () => {
+        menu.classList.remove("active");
+        overlay.classList.remove("show");
+    });
+
+    // CLOSE MENU when clicking outside
+    overlay.addEventListener("click", () => {
+        menu.classList.remove("active");
+        overlay.classList.remove("show");
+    });
+
+});
+</script>
+
+<!-- ============================ Slider Dropdown Menu  =============================== -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    // MOBILE MENU OPEN
+    const menuBtn = document.querySelector(".menu-btn");
+    const sidebar = document.querySelector(".menu_btn_info");
+    const overlay = document.querySelector(".overlay");
+    const closeBtn = document.querySelector(".close-btn");
+
+    menuBtn.addEventListener("click", () => {
+        sidebar.classList.add("active");
+        overlay.classList.add("show");
+    });
+
+    closeBtn.addEventListener("click", () => {
+        sidebar.classList.remove("active");
+        overlay.classList.remove("show");
+    });
+
+    overlay.addEventListener("click", () => {
+        sidebar.classList.remove("active");
+        overlay.classList.remove("show");
+    });
+
+    // ⭐ MOBILE DROPDOWN OPEN/CLOSE ON CLICK
+    const dropdowns = document.querySelectorAll(".menu_btn_info .dropdown");
+
+    dropdowns.forEach(drop => {
+        drop.addEventListener("click", function (e) {
+            e.stopPropagation();
+            this.classList.toggle("open");
+        });
+    });
+});
+</script>
+
+<!-- ============================ Equairy form popup-box =============================== -->
+<script>
+    function openPopup() {
+        document.getElementById("popup").style.display = "block";
+        document.body.classList.add("no-scroll");
+    }
+    function closePopup() {
+        document.getElementById("popup").style.display = "none";
+        document.body.classList.remove("no-scroll");
+    }
+</script>
+
+<!-- ============================  Footer  =============================== -->
+<footer class="footer">
+    <div class="container">
+      <div class="footer-info">
+        <!-- Column 1: Logo + Social -->
+        <div class="footer-section">
+            <img src="../assets/logo.png" class="footer-logo" alt="Preschool Logo">
+
+            <p class="footer-text">
+                Building bright futures with joyful learning.
+            </p>
+
+            <!-- Google Map -->
+            <div class="footer-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.713390921391!2d73.80806407371841!3d18.45131787128889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc29513dc000001%3A0x6bcacb06efbe645c!2sSpacECE%20INDIA%20FOUNDATION!5e0!3m2!1sen!2sin!4v1764842317194!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+
+
+
+        <!-- Column 2: Contact Form (Parents Admission Inquiry) -->
+        <div class="footer-section">
+            <h3>Contact Us</h3>
+
+            <form class="footer-form">
+                <input type="text" placeholder="Your Name">
+                <input type="email" placeholder="Your Email">
+                <input type="text" placeholder="Your Phone">
+                <select>
+                    <option>Select Program</option>
+                    <option>Playgroup</option>
+                    <option>Nursery</option>
+                    <option>Jr. KG</option>
+                    <option>Sr. KG</option>
+                </select>
+                <textarea placeholder="Message"></textarea>
+                <button type="submit" class="footer-btn">Submit</button>
+            </form>
+        </div>
+
+        <!-- Column 3: Quick Links -->
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <div class="link-wrap">
+              <ul class="footer-links">
+                <li><a href="#">About Preschool</a></li>
+                <li><a href="#">Our Programs</a></li>
+                <li><a href="#">Our Vision</a></li>
+              </ul>
+              <ul class="footer-links">
+                <li><a href="#">Parent Resources</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+              </ul>
+            </div>
+            <div class="footer-social">
+              <a href="https://www.facebook.com/SpacECE/"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="https://www.twitter.com/SpacECE/"><i class="fa-brands fa-twitter"></i></a>
+              <a href="https://www.instagram.com/SpacECE/"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://www.youtube.com/SpacECE/"><i class="fa-brands fa-youtube"></i></a>
+              <a href="https://www.Whatsapp.com/SpacECE/"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+
+        </div>
+      </div>
+    </div>
+    <hr>
+    <!-- Bottom -->
+    <div class="footer-bottom">
+        © 2025 Your Preschool Name — All Rights Reserved
+    </div>
+</footer>
+
+<script>
+const words = [
+    { text: "Preschool", color: "#FFFFFF" },
+    { text: "School", color: "#FFFFFF" }
+];
+
+let index = 0;
+
+function changeText() {
+    index = (index + 1) % words.length;
+    const textElement = document.getElementById("text-rotate");
+
+    textElement.style.opacity = 0;
+
+    setTimeout(() => {
+        textElement.innerText = words[index].text;
+        textElement.style.color = words[index].color;
+        textElement.style.opacity = 1;
+    }, 400);
+}
+
+setInterval(changeText, 2000);
+</script>
+
+<script>
+const cards = document.querySelectorAll(".feature-card");
+
+function revealCards() {
+    cards.forEach(card => {
+        const rect = card.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 50) {
+            card.classList.add("show");
+        }
+    });
+}
+
+window.addEventListener("scroll", revealCards);
+window.addEventListener("load", revealCards);
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelector(".info-left").style.transform = "translate(-10px, -50%)";
+    document.querySelector(".info-right").style.transform = "translate(10px, -50%)";
+});
+</script>
+<script>
+    // Fade in when section visible
+window.addEventListener("scroll", function () {
+    const section = document.querySelector(".highlight-box");
+    const position = section.getBoundingClientRect().top;
+
+    if (position < window.innerHeight - 150) {
+        section.classList.add("show-highlight");
+    }
+});
+
+</script>
+<script>
+    const boxes = document.querySelectorAll('.p-box');
+
+window.addEventListener('scroll', () => {
+    boxes.forEach(box => {
+        const pos = box.getBoundingClientRect().top;
+        if(pos < window.innerHeight - 100){
+            box.style.opacity = "1";
+            box.style.transform = "translateY(0)";
+        }
+    });
+});
+
+</script>
+
+    <script>
+        // Thumbnail Fallback Logic
+document.querySelectorAll(".thumb").forEach(img => {
+    let id = img.getAttribute("data-id");
+
+    let list = [
+        `https://img.youtube.com/vi/${id}/hqdefault.jpg`,
+        `https://img.youtube.com/vi/${id}/sddefault.jpg`,
+        `https://img.youtube.com/vi/${id}/mqdefault.jpg`,
+        `https://img.youtube.com/vi/${id}/default.jpg`
+    ];
+
+    let i = 0;
+
+    function loadNext() {
+        if (i >= list.length) return;
+        img.src = list[i];
+        img.onerror = () => {
+            i++;
+            loadNext();
+        };
+    }
+
+    loadNext();
+});
+
+
+// Slider movement
+let slider = document.querySelector(".video-container");
+let currentSlide = 0;
+
+document.querySelector(".right-btn").onclick = () => {
+    if (currentSlide > -((slider.children.length - 1) * 300)) {
+        currentSlide -= 300;
+        slider.style.transform = `translateX(${currentSlide}px)`;
+    }
+};
+
+document.querySelector(".left-btn").onclick = () => {
+    if (currentSlide < 0) {
+        currentSlide += 300;
+        slider.style.transform = `translateX(${currentSlide}px)`;
+    }
+};
+
+
+// Popup play
+let popup = document.getElementById("videoPopup");
+let player = document.getElementById("popupPlayer");
+
+document.querySelectorAll(".video-card").forEach(card => {
+    card.onclick = () => {
+        let id = card.getAttribute("data-video");
+        player.src = `https://www.youtube.com/embed/${id}?autoplay=1`;
+        popup.style.display = "flex";
+    };
+});
+
+document.getElementById("closePopupBtn").onclick = () => {
+    popup.style.display = "none";
+    player.src = "";
+};
+
+// Close popup when clicking outside video
+popup.onclick = (e) => {
+    if (e.target === popup) {
+        popup.style.display = "none";
+        player.src = "";
+    }
+};
+
+    </script>
+    <script>
+    const faqItems = document.querySelectorAll(".faq-item");
+
+faqItems.forEach(item => {
+    const question = item.querySelector(".faq-question");
+    const answer = item.querySelector(".faq-answer");
+    const icon = item.querySelector(".faq-icon");
+
+    question.addEventListener("click", () => {
+
+        answer.classList.toggle("open");
+
+        icon.textContent = icon.textContent === "+" ? "-" : "+";
+    });
+});
+
+</script>
+</body>
+</html>

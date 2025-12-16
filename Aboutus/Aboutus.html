@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navbar</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Livvic:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="" crossorigin="anonymous" />
+<style>
+    .pedi-hero-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 10%;
+    background: linear-gradient(135deg, #FFF4E0, #FFE3B5);
+}
+
+.fadeBlock {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 0.8s ease;
+}
+.fadeBlock.showBlock {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.pedi-text-box {
+    max-width: 50%;
+}
+
+.pedi-badge {
+    background: #FF9D00;
+    padding: 6px 18px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.pedi-heading {
+    font-size: 45px;
+    margin: 0 0 20px;
+    color: #222;
+}
+
+.pedi-desc {
+    line-height: 1.6;
+    font-size: 17px;
+    color: #444;
+    margin-bottom: 30px;
+}
+
+.pedi-btn-group {
+    display: flex;
+    gap: 15px;
+}
+
+.pedi-btn-primary {
+    background: #FF9D00;
+    padding: 12px 25px;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.pedi-btn-primary:hover {
+    background: #da8300;
+}
+
+.pedi-btn-outline {
+    padding: 12px 25px;
+    border-radius: 8px;
+    border: 2px solid #da8300;
+    background: transparent;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.pedi-btn-outline:hover {
+    border-color: #a16200;
+}
+
+.pedi-image-box {
+    width: 40%;
+    position: relative;
+}
+
+.pedi-image-box img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0px 8px 25px rgba(0,0,0,0.15);
+}
+
+/* Spacece Stats Small & Square Box */
+.pedi-mini-card {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: #ffffff;
+    padding: 18px 20px;
+    border-radius: 10px;   /* choras jovo hoy to 6–10px perfect */
+    width: 200px;          /* box nanu kariyu */
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.12);
+}
+@keyframes floatBox {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+.pedi-mini-card h3 {
+    font-size: 18px;       /* title nanu */
+    margin-bottom: 10px;
+    color: #0a2a4a;
+}
+
+.pedi-recent-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+    font-size: 14px;       /* text nanu */
+    color: #444;
+}
+
+.pedi-recent-item span:last-child {
+    color: #ff6b6b;        /* red color same */
+}
+
+@media (max-width: 900px) {
+    .pedi-hero-wrapper {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 5%;
+    }
+    .pedi-text-box {
+        max-width: 100%;
+        margin-bottom: 40px;
+    }
+    .pedi-image-box {
+        width: 90%;
+    }
+    .pedi-mini-card {
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -30px;
+    }
+}
+.about-section {
+  background: #fff6eb;
+  padding: 50px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.about-wrapper {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.accordion {
+  border-bottom: 2px solid #333;
+  padding-bottom: 10px;
+}
+
+.accordion-header {
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  padding-right: 25px;
+}
+
+.accordion-header .arrow {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 16px;
+  transition: transform 0.3s;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  margin-top: 15px;
+  line-height: 1.7;
+  color: #444;
+}
+
+/* --- Section Background --- */
+.founding-team {
+  background: #fff6eb; /* Soft peach background */
+  padding: 60px 20px;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+}
+
+.founding-team h2 {
+  color: #ff9f00;
+  margin-bottom: 50px;
+}
+
+
+/* --- Team Cards Container --- */
+.team-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+/* --- Individual Card --- */
+.team-card {
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  width: 300px;
+  padding-top: 60px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+   padding-top: 120px; /* circle card andar aavse */
+  overflow: hidden; 
+}
+
+.team-card:hover {
+  transform: translateY(-10px);
+}
+
+/* --- Photo Styling --- */
+.photo-wrapper {
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid #ff9f00; /* border matching theme */
+  background: #fff;
+}
+
+.photo-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.founding-header {
+  background: #ffb400;   /* Yellow bar */
+  padding: 25px 0;
+  text-align: center;
+  margin-bottom: 50px;   /* space niche */
+  border-radius: 10px;   /* optional smooth look */
+}
+
+.founding-header h2 {
+  color: rgb(7, 7, 7);          /* white text */
+  font-size: 30px;
+  margin: 0;
+  font-weight: 700;
+}
+
+/* --- Card Content --- */
+.card-content {
+  padding: 80px 20px 20px;
+  text-align: left;
+}
+
+.card-content h3 {
+  color: #333;
+  margin-bottom: 15px;
+  font-size: 1.2em;
+}
+
+.card-content p {
+  font-size: 0.85em;
+  color: #555;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.card-content a {
+  font-size: 0.8em;
+  color: #ff9f00;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.card-content a:hover {
+  text-decoration: underline;
+}
+.legal-status-section {
+    background: #fff6eb; /* Light peach background */
+    padding-bottom: 50px;
+    font-family: Arial, sans-serif;
+}
+
+.legal-header {
+    background: #ffb400; /* Yellow bar */
+    padding: 25px 50px;
+}
+
+.legal-header h2 {
+    color: #000;
+    margin: 0;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;   /* 👈 Heading Center */
+}
+
+
+.legal-content {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px;
+    line-height: 1.7;
+    font-size: 16px;
+    color: #333;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 15px;
+    color: #ff9f00;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+</style>
+</head>
+<body>
+
+<section>
+    <div class="top-bar">
+        Call us @ +91 1800 4120 1580
+    </div>
+</section>
+<!-- ============================ navbar =============================== -->
+<section>
+  <div class="container">
+    <nav class="navbar">
+        <div class="logo">
+            <img src="../assets/logo.png" alt="Spacece Logo">
+        </div>
+
+        <ul class="nav-links">
+
+            <li><a href="index.html">Home</a></li>
+
+            <!-- Programs -->
+            <li class="dropdown">
+                <a href="#">Programs <i class="fa-solid fa-angle-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="./Programs/start_your_school.html">Start Your School</a></li>
+                    <li><a href="./Programs/upgrade_your_school.html">Upgrade Your School</a></li>
+                    <li><a href="./Programs/parents_toddler_program.html">Parents & Toddler Program</a></li>
+                </ul>
+            </li>
+
+            <!-- PTTC -->
+            <li><a href="PTTC.html">PTTC</a></li>
+
+            <!-- Admissions -->
+            <li class="dropdown">
+                <a href="Admission.html">Admissions</a>
+            </li>
+
+            <!-- About Us -->
+            <li class="dropdown">
+                <a href="Aboutus.html">About Us <i class="fa-solid fa-angle-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="./Aboutus/Contactus.html">Contact Us</a></li>
+                    <li><a href="./Aboutus/Our_vision.html">Our Vision & Mission</a></li>
+                    <li><a href="./Aboutus/Our_Team.html">Our Team</a></li>
+                    <li><a href="./Aboutus/Legal_status.html">Legal status</a></li>
+                </ul>
+            </li>
+
+            <!-- Resources -->
+            <li class="dropdown">
+                <a href="Resources.html">Resources <i class="fa-solid fa-angle-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="./Resources/Blogs.html">Blogs</a></li>
+                    <li><a href="./Resources/Parent_guides.html">Parent Guides</a></li>
+                </ul>
+            </li>
+
+
+        </ul>
+
+        <!-- Enquire Button -->
+        <a class="enquire-btn" href="javascript:void(0)" onclick="openPopup()">Enquire Now</a>
+
+        <!-- POPUP OVERLAY -->
+        <div class="popup-overlay" id="popup">
+            <div class="popup-box">
+
+                <!-- Close Button -->
+                <button class="close-popup" onclick="closePopup()">×</button>
+
+                <!-- ZOHO FORM STARTS HERE -->
+                <form action="https://forms.zohopublic.com/kidoenterprises/form/KreedoWebsiteContactUsForm/formperma/UxHWZ_P2f6BEfg5Q5jJFP8txtfC_XkHyoDowK3rbSIA/htmlRecords/submit"
+                    name="form" method="POST" id="form" accept-charset="UTF-8" class="enquire_form">
+
+
+                    <h2>Please fill out the form below and we will respond within 24hrs</h2>
+
+                    <!-- Hidden UTM Fields -->
+                    <input type="hidden" name="zf_referrer_name">
+                    <input type="hidden" name="zf_redirect_url">
+                    <input type="hidden" name="zc_gad">
+                    <input type="hidden" name="utm_source" id="utm_source">
+                    <input type="hidden" name="utm_medium" id="utm_medium">
+                    <input type="hidden" name="utm_campaign" id="utm_campaign">
+                    <input type="hidden" name="utm_device" id="utm_device">
+                    <input type="hidden" name="utm_Adgroup" id="utm_Adgroup">
+                    <input type="hidden" name="gclid" id="gclid">
+                    <input type="hidden" name="referrername" id="referrername">
+
+                    <!-- Inputs -->
+                    <input type="text" name="SingleLine" placeholder="Enter your name" required>
+                    <input type="email" name="Email" placeholder="Enter Your Email" required>
+                    <input type="text" name="PhoneNumber_countrycode" pattern="[0-9]{10}" placeholder="Number" required>
+
+                    <select name="Dropdown" required>
+                        <option value="">Select State</option>
+                        <option>Maharashtra</option>
+                        <option>Gujarat</option>
+                    </select>
+
+                    <select name="Dropdown1" required>
+                        <option value="">Category</option>
+                        <option value="Individual">Starting a new school</option>
+                        <option value="K-12 School">Upgrading my school</option>
+                        <option value="Teacher">Interested in Teacher Training Course</option>
+                    </select>
+
+                    <textarea name="MultiLine" placeholder="Message"></textarea>
+
+                    <!-- Captcha -->
+                    <span id="captchaText">IqOmSl</span>
+                    <input type="text" placeholder="Enter the above text" required>
+
+                    <!-- Checkbox -->
+                    <label class="check-label">
+                        <input type="checkbox" checked>
+                        Please contact me via WhatsApp, SMS, Phone, and Email
+                    </label>
+
+                    <!-- Submit -->
+                    <button class="zf-submitColor">Submit</button>
+                </form>
+                <!-- 🔥 ZOHO FORM ENDS HERE -->
+            </div>
+        </div>
+
+
+        <!-- Mobile Menu Icon -->
+        <!-- <button class="menu-btn" onclick="openMenu()">☰</button> -->
+        <button class="menu-btn">☰</button>
+    </nav>
+
+    <!-- BLACK OVERLAY -->
+    <!-- <div class="overlay" onclick="closeMenu()"></div> -->
+     <div class="overlay"></div>
+
+    <!-- SIDEBAR -->
+    <nav class="menu_btn_info">
+        <button class="close-btn">×</button>
+
+        <div class="slider_logo">
+            <img src="../assets/logo.png" alt="Spacece Logo">
+        </div>
+        <ul class="slider_menu nav-links">
+
+            <li><a href="index.html">Home</a></li>
+
+            <!-- Programs -->
+            <li class="slider_menu dropdown">
+                <a href="#">Programs <i class="fa-solid fa-angle-right"></i></a>
+                <ul class="slider_menu dropdown-menu">
+                    <li><a href="./Programs/start_your_school.html">Start Your School</a></li>
+                    <li><a href="./Programs/upgrade_your_school.html">Upgrade Your School</a></li>
+                    <li><a href="./Programs/parents_toddler_program.html">Parents & Toddler Program</a></li>
+                </ul>
+            </li>
+
+            <!-- PTTC -->
+            <li><a href="PTTC.html">PTTC</a></li>
+
+            <!-- Admissions -->
+            <li class="sliderbar_menu dropdown">
+                <a href="Admission.html">Admissions</a>
+            </li>
+
+            <!-- About Us -->
+            <li class="sliderbar_menu dropdown">
+                <a href="./Aboutus/Aboutus.html">About Us <i class="fa-solid fa-angle-right"></i></a>
+                <ul class="sliderbar_menu dropdown-menu">
+                    <li><a href="./Aboutus/Contactus.html">Contact Us</a></li>
+                    <li><a href="./Aboutus/Our_Team.html">Our Team</a></li>
+                    <li><a href="./Aboutus/Our_vision.html">Our Vision & Mission</a></li>
+                   
+                </ul>
+            </li>
+
+            <!-- Resources -->
+            <li class="sliderbar_menu dropdown">
+                <a href="#">Resources <i class="fa-solid fa-angle-right"></i></a>
+                <ul class="sliderbar_menu dropdown-menu">
+                    <li><a href="./Resources/Blogs.html">Blogs</a></li>
+                    <li><a href="./Resources/Parent_guides.html">Parent Guides</a></li>
+                </ul>
+            </li>
+
+
+        </ul>
+    </nav>
+  </div>
+</section>
+<section class="pedi-hero-wrapper">
+
+    <!-- LEFT TEXT -->
+    <div class="pedi-text-box fadeBlock">
+        <div class="pedi-badge">About Spacece</div>
+
+        <h1 class="pedi-heading">Building a Smarter & Connected Digital Future</h1>
+
+        <p class="pedi-desc">
+            Spacece is a modern technology-driven company focused on building
+            smart, innovative and reliable digital solutions. 
+            Our mission is to simplify lives with intelligent platforms,
+            secure systems and seamless user experiences.
+        </p>
+
+        <div class="pedi-btn-group">
+            <a href="Contactus.html">
+                <button class="pedi-btn-primary">Contact Us</button>
+            </a>
+           <a href="Our_Team.html">
+             <button class="pedi-btn-primary">Our_Team</button>
+           </a>
+           <a href="Our_Team.html">
+             <button class="pedi-btn-primary">Our_vision</button>
+           </a>
+           <a href="Legal_status.html">
+             <button class="pedi-btn-primary">Legal status</button>
+           </a>
+        </div>
+    </div>
+
+    <!-- RIGHT IMAGE -->
+    <div class="pedi-image-box fadeBlock">
+        <img src="../ss/home-main.png" alt="Spacece Team" />
+
+        <!-- FLOAT CARD -->
+        <div class="pedi-mini-card">
+            <h3>Spacece Stats</h3>
+            <div class="pedi-recent-item"><span>Clients Served</span><span>+420</span></div>
+            <div class="pedi-recent-item"><span>Projects Done</span><span>+850</span></div>
+        </div>
+    </div>
+
+</section>
+<section class="about-section">
+  <div class="about-wrapper">
+
+    <div class="accordion">
+      <div class="accordion-header" onclick="toggleAccordion()">
+        Empowering lives through education, SpacECE India Foundation bridges the educational gap, 
+        promotes equal opportunities, and transforms communities across India.
+        <span class="arrow">⌃</span>
+      </div>
+
+      <div class="accordion-content" id="aboutContent">
+        <p>
+          Welcome to SpacECE India Foundation!
+          <br><br>
+         At SpacECE, we believe that education is the key to unlocking a brighter future. We are a non-profit organization dedicated to providing quality education, promoting lifelong learning, and empowering individuals and communities across India.
+
+Our mission is to bridge the educational gap and create equal opportunities for all. We envision a society where every child has access to quality education, regardless of their background or circumstances. Through our initiatives, we strive to inspire, empower, and transform lives.
+
+With a team of passionate educators, volunteers, and partners, we work tirelessly to make a positive impact on education. Our programs focus on various aspects, including early childhood education, school support, vocational training, and capacity-building for parents and teachers.
+
+Through our Home-as-a-Learning-SPACE initiative, we aim to transform homes into vibrant learning environments. We provide resources, guidance, and support to parents, empowering them to actively engage in their child's education and create a nurturing atmosphere for learning.
+
+We also establish learning centers in underserved communities, equipped with educational materials, technology, and qualified educators. These centers serve as safe and inclusive spaces where children can thrive academically and develop essential life skills.
+
+At SpacECE, we believe in the power of collaboration and partnerships. We actively collaborate with schools, government agencies, corporate entities, and other non-profit organizations to amplify our impact and reach more beneficiaries. Together, we can create a powerful ecosystem that nurtures educational excellence and social change.
+
+We invite you to join us in our mission to transform lives through education. Whether you are an individual, a corporate entity, or a passionate volunteer, there are many ways to get involved. Your support, be it through donations, volunteering, or advocacy, can make a significant difference in shaping a brighter future for countless individuals.
+
+Explore our website to learn more about our programs, initiatives, and success stories. Together, let's empower individuals, strengthen communities, and build a nation where education is a fundamental right for all.
+
+Thank you for visiting SpacECE India Foundation. We look forward to embarking on this transformative journey with you.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="founding-team">
+  <div class="container">
+    <div class="founding-header">
+    <h2>Founding Team</h2>
+</div>
+
+    <div class="team-cards">
+      
+      <div class="team-card">
+        <div class="photo-wrapper">
+         <img src="../ss/unnamed.jpg"> </div>
+        <div class="card-content">
+          <h3>Aparna Chaudhari</h3>
+          <p>With 15 years of experience in child development, child rights, and child education, Aparna brings a wealth of expertise to her role. Having worked with esteemed organizations such as ChildLine, Campaign Against Child Labour, and Kaivalya Education Foundation, she has demonstrated strong leadership and managerial skills. Aparna holds a Master's in Education from Azim Premji University, Bangalore, a Master's in Social Work (Psychiatry) from Pune University, and a Bachelor's in Social Work from Nagpur University.</p>
+          <p>She firmly believes in the transformative power of a nurturing environment for children's holistic growth, emphasizing the importance of enriching their surroundings with ample resources.</p>
+          <a href="Our_Team.html">Read More</a>
+        </div>
+      </div>
+
+      <div class="team-card">
+        <div class="photo-wrapper">
+         <img src="../ss/unnamed.png"> </div>
+        <div class="card-content">
+          <h3>Sachin Mohite</h3>
+          <p>With 15 years of experience in educational research, program design, and leadership roles, Sachin has made significant contributions to non-profit organizations and corporates alike. His expertise spans across sectors, including organizations like Muthra Foundation, SAP, Reliance Games, and educational start-ups like Learning Yogi. Sachin holds a PhD in Education (Active Citizenship Education) from the University of York, a Master's in Education (Leadership) from Azim Premji University, and a Master's in Computer Application (Management) from Pune University.</p>
+          <p>Sachin firmly believes that strong and well-trained organizational leadership is crucial for driving community-led, large-scale educational change and ensuring its sustainability beyond intervention.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section class="legal-status-section">
+    
+    <div class="legal-header">
+        <h2>Legal Status</h2>
+    </div>
+
+    <div class="legal-content">
+        <p>
+            SpacECE, registered as SpacECE India Foundation under section 8 of the Companies Act 2013, 
+            holds a solid legal status. The organization possesses various important documents and 
+            certificates, including the Memorandum of Association (MOA) and Articles of Association (AOA) 
+            registered with the office of the Registrar of Companies. Additionally, SpacECE is equipped 
+            with the necessary registrations such as the Permanent Account Number (PAN), Tax Deduction 
+            Account Number (TAN), 12A, and 80G which grants exemption from income tax payment. 
+            Furthermore, SpacECE is recognized by the government of NGO Darpan, confirming its status as 
+            a recognized non-profit organization.
+        </p>
+
+        <a href="Legal_status.html" class="read-more">Read More</a>
+    </div>
+
+</section>
+
+
+
+<!-- ============================  Dropdown button  =============================== -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const dropdown = document.querySelector(".dropdown > a");
+    const dropdownMenu = document.querySelector(".dropdown-menu");
+
+    dropdown.addEventListener("click", function (e) {
+        e.preventDefault(); 
+        dropdownMenu.style.display =
+            dropdownMenu.style.display === "block" ? "none" : "block";
+    });
+
+    document.addEventListener("click", function (e) {
+        if (!dropdown.contains(e.target) && !dropdownMenu.contains(e.target)) {
+            dropdownMenu.style.display = "none";
+        }
+    });
+});
+</script>
+
+<!-- ============================ Slider Menu Button =============================== -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const menu = document.querySelector(".menu_btn_info");  // RIGHT SIDEBAR
+    const overlay = document.querySelector(".overlay");     // DARK BACKGROUND
+    const menuBtn = document.querySelector(".menu-btn");    // ☰ BUTTON
+    const closeBtn = document.querySelector(".close-btn");  // CROSS BUTTON
+
+    // OPEN MENU
+    menuBtn.addEventListener("click", () => {
+        menu.classList.add("active");
+        overlay.classList.add("show");
+    });
+
+    // CLOSE MENU (X button)
+    closeBtn.addEventListener("click", () => {
+        menu.classList.remove("active");
+        overlay.classList.remove("show");
+    });
+
+    // CLOSE MENU when clicking outside
+    overlay.addEventListener("click", () => {
+        menu.classList.remove("active");
+        overlay.classList.remove("show");
+    });
+
+});
+</script>
+
+<!-- ============================ Slider Dropdown Menu  =============================== -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    // MOBILE MENU OPEN
+    const menuBtn = document.querySelector(".menu-btn");
+    const sidebar = document.querySelector(".menu_btn_info");
+    const overlay = document.querySelector(".overlay");
+    const closeBtn = document.querySelector(".close-btn");
+
+    menuBtn.addEventListener("click", () => {
+        sidebar.classList.add("active");
+        overlay.classList.add("show");
+    });
+
+    closeBtn.addEventListener("click", () => {
+        sidebar.classList.remove("active");
+        overlay.classList.remove("show");
+    });
+
+    overlay.addEventListener("click", () => {
+        sidebar.classList.remove("active");
+        overlay.classList.remove("show");
+    });
+
+    // ⭐ MOBILE DROPDOWN OPEN/CLOSE ON CLICK
+    const dropdowns = document.querySelectorAll(".menu_btn_info .dropdown");
+
+    dropdowns.forEach(drop => {
+        drop.addEventListener("click", function (e) {
+            e.stopPropagation();
+            this.classList.toggle("open");
+        });
+    });
+});
+</script>
+
+<!-- ============================ Equairy form popup-box =============================== -->
+<script>
+function toggleAccordion() {
+  const content = document.getElementById("aboutContent");
+  const arrow = document.querySelector(".arrow");
+
+  if (content.style.maxHeight) {
+    content.style.maxHeight = null;
+    arrow.style.transform = "rotate(0deg)";
+  } else {
+    content.style.maxHeight = content.scrollHeight + "px";
+    arrow.style.transform = "rotate(180deg)";
+  }
+}
+</script>
+
+<script>
+    function openPopup() {
+        document.getElementById("popup").style.display = "block";
+        document.body.classList.add("no-scroll");
+    }
+    function closePopup() {
+        document.getElementById("popup").style.display = "none";
+        document.body.classList.remove("no-scroll");
+    }
+</script>
+<script>
+    const fadeBlocks = document.querySelectorAll('.fadeBlock');
+
+function fadeScrollEffect() {
+    const triggerHeight = window.innerHeight * 0.85;
+
+    fadeBlocks.forEach(section => {
+        const topPos = section.getBoundingClientRect().top;
+        if (topPos < triggerHeight) {
+            section.classList.add('showBlock');
+        }
+    });
+}
+
+window.addEventListener('scroll', fadeScrollEffect);
+window.addEventListener('load', fadeScrollEffect);
+
+</script>
+<!-- ============================  Footer  =============================== -->
+<footer class="footer">
+    <div class="container">
+      <div class="footer-info">
+        <!-- Column 1: Logo + Social -->
+        <div class="footer-section">
+            <img src="../assets/logo.png" class="footer-logo" alt="Preschool Logo">
+
+            <p class="footer-text">
+                Building bright futures with joyful learning.
+            </p>
+
+            <!-- Google Map -->
+            <div class="footer-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.713390921391!2d73.80806407371841!3d18.45131787128889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc29513dc000001%3A0x6bcacb06efbe645c!2sSpacECE%20INDIA%20FOUNDATION!5e0!3m2!1sen!2sin!4v1764842317194!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+
+
+
+        <!-- Column 2: Contact Form (Parents Admission Inquiry) -->
+        <div class="footer-section">
+            <h3>Contact Us</h3>
+
+            <form class="footer-form">
+                <input type="text" placeholder="Your Name">
+                <input type="email" placeholder="Your Email">
+                <input type="text" placeholder="Your Phone">
+                <select>
+                    <option>Select Program</option>
+                    <option>Playgroup</option>
+                    <option>Nursery</option>
+                    <option>Jr. KG</option>
+                    <option>Sr. KG</option>
+                </select>
+                <textarea placeholder="Message"></textarea>
+                <button type="submit" class="footer-btn">Submit</button>
+            </form>
+        </div>
+
+        <!-- Column 3: Quick Links -->
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <div class="link-wrap">
+              <ul class="footer-links">
+                <li><a href="#">About Preschool</a></li>
+                <li><a href="#">Our Programs</a></li>
+                <li><a href="#">Our Vision</a></li>
+              </ul>
+              <ul class="footer-links">
+                <li><a href="#">Parent Resources</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+              </ul>
+            </div>
+            <div class="footer-social">
+              <a href="https://www.facebook.com/SpacECE/"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="https://www.twitter.com/SpacECE/"><i class="fa-brands fa-twitter"></i></a>
+              <a href="https://www.instagram.com/SpacECE/"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://www.youtube.com/SpacECE/"><i class="fa-brands fa-youtube"></i></a>
+              <a href="https://www.Whatsapp.com/SpacECE/"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+
+        </div>
+      </div>
+    </div>
+    <hr>
+    <!-- Bottom -->
+    <div class="footer-bottom">
+        © 2025 Your Preschool Name — All Rights Reserved
+    </div>
+</footer>
+
+
+</body>
+</html>

@@ -1,0 +1,511 @@
+
+/* ============================  GLOBAL =============================== */ 
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+/* ============================  TOP BAR  =============================== */
+.top-bar {
+    background: #000;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    font-family:Livvic, sans-serif;
+    font-size:14px;
+    font-weight:700;
+    padding-top: 10px;
+    cursor: pointer;
+
+}
+
+/* ============================  Navbar — MAIN WRAPPER  =============================== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    z-index: 10;
+}
+
+.navbar .logo img {
+    max-width: 150px;
+    height: auto;
+}
+
+/* =====================================================
+   DESKTOP NAV LINKS
+===================================================== */
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .nav-links li a {
+    text-decoration: none;
+    color: #333;
+    font-family: "Livvic", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.navbar .nav-links li a:hover {
+    transform: translateY(-5px);
+}
+
+/* =====================================================
+   DROPDOWN —
+===================================================== */
+.navbar .dropdown {
+    position: relative;
+}
+
+.navbar .dropdown-menu {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 250px;
+    background: #fff;
+    padding: 10px 0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    transition: 0.2s ease;
+}
+
+.navbar .dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+.dropdown-menu li {
+    padding: 8px 20px;
+}
+
+.dropdown-menu li a {
+    color: #4d4d4d;
+    font-size: 16px;
+}
+
+/* ICON ARROW */
+.navbar .nav-links li a i {
+    font-size: 14px;
+    margin-left: 6px;
+    position: relative;
+    top: 1px;
+    color: #555;
+    transition: 0.3s;
+}
+
+.navbar .dropdown:hover > a i {
+    transform: rotate(180deg);
+    color: #000;
+}
+
+/* =====================================================
+   ENQUIRE BUTTON
+===================================================== */
+.enquire-btn {
+    background: #ffaa01;
+    padding: 12px 30px;
+    border-radius: 6px;
+    color: #fff;
+    font-family: Livvic, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.hero_enquire_btn {
+    margin: 40px 0px;
+}
+/* =====================================================   MOBILE MENU BUTTON (☰) ===================================================== */
+.navbar .menu-btn {
+    display: none;
+    font-size: 32px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* =====================================================
+   MOBILE SIDEBAR MENU (SLIDER)
+===================================================== */
+
+.slider_logo img{
+max-width: 150px;
+height: auto;
+margin: auto;
+display: flex;
+padding-top: 30px;
+}
+
+.menu_btn_info {
+    position: fixed;
+    top: 0;
+    right: -260px;
+    width: 260px;
+    height: 100%;
+    background: #fff;
+    padding-top: 60px;
+    z-index: 9999;
+    transition: 0.4s ease;
+}
+
+.menu_btn_info.active {
+    right: 0;
+}
+
+.menu_btn_info ul {
+    list-style: none;
+    padding: 20px;
+}
+
+.menu_btn_info ul li {
+    margin: 15px 0;
+}
+
+.menu_btn_info ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    font-family: Livvic, sans-serif;
+    font-weight: 600;
+}
+
+/* MOBILE MENU CLOSE BUTTON */
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 35px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* =====================================================
+   OVERLAY FOR MOBILE MENU
+===================================================== */
+.overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    z-index: 999;
+}
+
+.overlay.show {
+    display: block;
+}
+
+/* =====================================================
+   POPUP (ENQUIRE NOW)
+===================================================== */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    z-index: 1000;
+}
+
+.popup-box {
+    max-width: 550px;
+    height: 500px;
+    background: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1001;
+    overflow-y: auto;
+}
+
+.close-popup {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.popup-box input,
+.popup-box select,
+.popup-box textarea {
+    width: 100%;
+    padding: 8px 10px;
+    margin: 8px 0;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-family: Livvic, sans-serif;
+    font-weight: 600;
+}
+
+.zf-submitColor {
+    width: 100%;
+    background: #ffaa01;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* ============================ Slider Dropdown Menu  =============================== */
+
+.menu_btn_info .dropdown-menu {
+    display: none;
+    padding-left: 15px;
+}
+
+.menu_btn_info .dropdown.open .dropdown-menu {
+    display: block;
+}
+
+.menu_btn_info .dropdown a i {
+    transition: 0.3s;
+}
+
+.menu_btn_info .dropdown.open > a i {
+    transform: rotate(90deg);
+}
+
+.menu_btn_info ul li {
+    margin: 15px 0;
+    padding: 0;
+}
+
+.menu_btn_info.dropdown-menu li {
+    padding: 0px;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+@media (max-width: 992px) {
+    .nav-links,
+    .enquire-btn {
+        display: none;
+    }
+    .navbar .menu-btn {
+        display: block;
+    }
+}
+
+
+
+/* ============================  Footer  =============================== */
+
+
+.footer {
+    background: #1b1b1b;
+    color: #fff;
+    padding: 60px 20px 30px;
+    font-family: 'Arial', sans-serif;
+}
+
+/* .footer-info {
+    max-width: 100%;
+    margin: auto; */
+    /* display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px; */
+    /* display: flex;
+    justify-content: space-between;
+} */
+
+.footer-section {
+    width: 33.33%;
+    padding: 0 15px;
+    text-align: center;
+    box-sizing: border-box;  /* ⭐⭐ IMPORTANT */
+    padding-bottom: 30px;
+}
+
+.footer-info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;  /* ⭐⭐ IMPORTANT */
+}
+
+.footer-logo {
+    width: 160px;
+    margin-bottom: 15px;
+}
+
+.footer-text {
+    font-size: 15px;
+    margin-bottom: 20px;
+    line-height: 22px;
+    opacity: 0.8;
+}
+
+/* .footer-social a {
+    margin-right: 12px;
+    color: #fff;
+    font-size: 20px;
+    transition: 0.3s;
+} */
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+    transition: 0.3s;
+}
+
+.footer-social a {
+    background-color: #F2F1F3;
+    text-align: center;
+    align-items: center;
+    color: #1b1b1b;
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    transition: 0.2s ease-in-out;
+}
+
+.fa-brands, .fab {
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.footer-social a:hover {
+    color: #F2F1F3;
+    background-color:#ffaa01 ;
+}
+
+/* Map iframe */
+.footer-map iframe {
+    width: 100%;
+    height: 180px;
+    border-radius: 10px;
+    border: none;
+    margin-top: 15px;
+}
+
+/* Quick Links */
+.footer-section h3 {
+    font-size: 20px;
+    margin:0px 0px 15px 0px;
+}
+
+.footer-links li {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #f7c32d;
+    padding-left: 5px;
+}
+
+/* Form */
+.footer-form input,
+.footer-form select,
+.footer-form textarea {
+    width: 100%;
+    max-width: 100%;   /* ⭐ Prevent stretching */
+    box-sizing: border-box;  /* ⭐ Prevent overflow */
+    margin-bottom: 12px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+}
+
+
+.footer-form textarea {
+    height: 80px;
+}
+
+.footer-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #000;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.footer-btn:hover {
+    background: #ffaa01;
+}
+
+.link-wrap {
+    display: flex;
+    /* gap: 20px; */
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    width: 100%;
+    text-align: center;
+}
+
+ul.footer-links {
+    text-align: center;
+    width: 50%;
+}
+/* Footer bottom */
+
+.footer hr{
+  margin: 20px 0px 30px 0px;
+}
+
+.footer-bottom {
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .footer-section {
+        width: 50%;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-section {
+        width: 100%;
+    }
+}
+
